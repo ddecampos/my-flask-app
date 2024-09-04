@@ -7,12 +7,18 @@
 # You can add other services your application may depend on here, such as a
 # database or a cache. For examples, see the Awesome Compose repository:
 # https://github.com/docker/awesome-compose
+version: '2.4'  # The last version of Docker Compose file format that directly supports mem_limit and cpus
 services:
-  server:
-    build:
-      context: .
+  my-flask-app:
+    container_name: my-flask-app
+    image: 314146298842.dkr.ecr.us-east-2.amazonaws.com/my-flask-app:latest
+    volumes:
+      - ./data:/data
     ports:
-      - 8080:8080
+      - "80:8080"
+    restart: always
+    mem_limit: 256M
+    cpus: 0.5
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
