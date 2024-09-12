@@ -1,7 +1,5 @@
-Este código crea una aplicación Flask con una sola ruta que devuelve un mensaje simple cuando accedes a la raíz del sitio web.
+El objetivo de este challenge consiste en crear un servicio Python simple y definir un pipeline CI/CD para el servicio. Utilizando GitHub Actions, Docker, Sonar Cloud, Snyk y servicios de AWS.
 
-Pasos:
-```bash
-. ./install-flask.sh
-python app.py
-```
+<p align="center">
+  <img src="./images/diagrama.png" alt="Diagrama Excalidraw" width="800"/>
+</p>
